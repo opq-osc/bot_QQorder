@@ -19,7 +19,7 @@ def receive_group_msg(ctx: GroupMsg):
         try:
             after = ctx.Content.split(' ', 2)
             define(after[1], after[2])
-            result = '学习对话'
+            result = '学习对话成功.'
             action.sendGroupText(ctx.FromGroupId, result)
         except BaseException:
             result = '学习对话失败，请检查格式'
